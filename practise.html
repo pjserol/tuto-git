@@ -1,0 +1,174 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Introduction to Git</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+
+<body>
+    <h1>Practise</h1>
+
+    <article>
+        <h2>Step 1 - init</h2>
+
+        <aside>
+            <p>echo "# tuto-git" >> README.md<br />
+                git init<br />
+                git add README.md<br />
+                git commit -m "first commit"<br />
+                git remote add origin git@github.com:pjserol/tuto-git.git<br />
+                git push -u origin master</p>
+        </aside>
+        <p>Note: <br />
+            README, information about project.</p>
+    </article>
+
+    <article>
+        <h2>Step 2 - add, commit, pull & push</h2>
+
+        <aside>
+            <p>// to add all the files<br />
+                git add .<br />
+                git add filename<br />
+                git commit -m "second commit"<br />
+                // get the last change from the remote repository<br />
+                git pull<br />
+                // push the last change from the local repository<br />
+                git push</p>
+        </aside>
+
+        <h3>Add a new user</h3>
+        <p>
+            User 1, settings -> manage access -> invite a collaborator <br />
+            User 2:<br />
+            receive the invite, then accept the invite<br />
+            Create a folder struct for the project example (Users/pjserol/code/github.com/pjserol/tuto-git/)</p>
+    </article>
+
+    <article>
+        <h2>Step 3 (user 2) - clone, status & config</h2>
+
+        <aside>
+            <p>git clone https://github.com/pjserol/tuto-git.git<br />
+                // cd → change directory<br />
+                cd tuto-git/<br />
+                // list<br />
+                ls<br />
+                git status<br />
+                // change a file<br />
+                git add filename<br />
+                // config user<br />
+                git config --global user.email "you@example.com"<br />
+                git config --global user.name "Your name"<br />
+                git commit -m "first commit user 2"<br />
+                git pull<br />
+                git push</p>
+        </aside>
+
+    </article>
+
+    <article>
+        <h2>Step 4 - branch & checkout</h2>
+
+        <aside>
+            <p>git pull<br />
+                git branch<br />
+                git checkout -b Feature/01<br />
+                // equal to git branch Feature/01 & git checkout Feature/01<br />
+                git add filename<br />
+                git commit -m "third commit"<br />
+                git push --set-upstream origin Feature/01</p>
+        </aside>
+        <p>Note: <br />
+            You can also go use Visual Studio Code to see what changes in the file</p>
+    </article>
+
+    <article>
+        <h2>Step 5 - stash & pop</h2>
+
+        <aside>
+            <p>git checkout master<br />
+                // change a file<br />
+                // record the current state of the directory<br />
+                git stash<br />
+                git checkout Feature/01<br />
+                // do some work (commit, push)<br />
+                git checkout master<br />
+                // remove a single stash from the list<br />
+                git stash pop<br />
+                git commit -m "third commit"<br />
+                git push --set-upstream origin Feature/01</p>
+        </aside>
+    </article>
+
+    <article>
+        <h2>Step 6 - diff & log</h2>
+
+        <aside>
+            <p>// show the changes of the files"<br />
+                git diff"<br />
+                // show the files changes for a commit"<br />
+                git show"<br />
+                // show full change history"<br />
+                git log"<br />
+                // list of the changes dates and authors for a file"<br />
+                git blame index.html</p>
+        </aside>
+        <p>Note: <br />
+            show with github, how to create a Pull Request</p>
+    </article>
+
+    <article>
+        <h2>Step 7 - git reset</h2>
+
+        <aside>
+            <p>// change a local file
+                git add .<br />
+                // unstage file<br />
+                git reset<br />
+                git add .<br />
+                git commit -m "other commit"<br />
+                // cancel local commit<br />
+                git reset HEAD~1</p>
+        </aside>
+        <p>Note: <br />
+            HEAD is the pointer to the current branch reference</p>
+    </article>
+
+    <article>
+        <h2>Step 8 - git merge (and fix conflict)</h2>
+
+        <aside>
+            <p>git checkout master<br />
+                // change a local file<br />
+                git add .<br />
+                git commit -m "other commit"<br />
+                git push<br />
+                git checkout Feature/01<br />
+                // apply the last change of master in the branch<br />
+                git merge master</p>
+        </aside>
+        <p>Note: <br />
+            Fix a conflict (:wq), fix the files with a conflict then you can commit and push your code</p>
+    </article>
+
+    <article>
+        <h2>Step 9 - revert</h2>
+
+        <aside>
+            <p>git checkout master<br />
+                // change a local file<br />
+                git add .<br />
+                git commit -m "other commit"<br />
+                git push<br />
+                git log<br />
+                git revert 59ba0e7<br />
+                git push</p>
+        </aside>
+    </article>
+</body>
+
+</html>

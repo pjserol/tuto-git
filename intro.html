@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Introduction to Git</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+
+<body>
+    <h1>Introduction</h1>
+
+    <article>
+        <h2>Qu’est-ce git ?</h2>
+
+        <p>Git est un logiciel de gestion de version decentralise en anglais Version Control System (VCS). C’est un
+            logiciel qui aides les développeurs à travailler ensemble et a suivre l’historique de leur travail. Git est
+            un logiciel libre créé par Linus Torvalds, auteur du noyau Linux.
+        </p>
+    </article>
+    <article>
+        <h2>Difference entre Git et SVN + TFS</h2>
+
+        SVN ou Subversion est un système de gestion de source centralise. C’est a dire qu’il faut un serveur pour créer
+        des branches et archiver du code ou tout se passe sur le serveur.<br />
+
+        Git a l'opposé est un système de gestion de source décentralisée. On peut travailler directement en local
+        sans serveur.<br />
+
+        Pour comparer avec TFS, SVN et Git sont des logiciels de sources de controls seulement. Ce ne sont pas des
+        logiciels pour faire des suivies de bugs, des rapports, de l'intégration continue, etc. TFS est un logiciel
+        de source centralisée
+        </p>
+    </article>
+
+    <article>
+        <h2>Comment installer Git</h2>
+
+        <p><a href="https://www.atlassian.com/git/tutorials/install-git">Installation</a>
+        </p>
+    </article>
+
+    <article>
+        <h2>Cycle de vie</h2>
+
+        <figure>
+            <img alt="Life cycle 1" src="https://www.tutorialspoint.com/git/images/life_cycle.png">
+        </figure>
+
+        <figure>
+            <img alt="Life cycle 2" src="https://prismoskills.appspot.com/lessons/Git/imgs/git_file_stages.png">
+        </figure>
+    </article>
+    <article>
+        <h2>Git HTTPS et SSH</h2>
+        2 techniques pour copier le répertoire en local a partir de Github:
+
+        <ul>
+            <li>HTTPS, clone l'URLs disponible du répertoires publique ou prive. Quand tu fais un Git clone
+                par exemple sur le répertoire distant, Git va te demander tes identifiants Github (nom d’utilisateur et
+                mot de passe).</li>
+            <li> SSH fournit un accès au répertoire distant via SSH, un protocole de sécurité. Tu dois générer une paire
+                de clé privée entre ton ordinateur et une clé publique de ton compte Github. Quand tu fais un Git, si
+                n’a pas entrer de “passphrase”, tu n’auras pas besoin de saisir les identifiants.</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>.gitignore</h2>
+
+        <p>Le fichier .gitignore est généralement placé à la racine du projet et contient un pattern des fichiers à
+            exclure du projet.
+        </p>
+    </article>
+</body>
+
+</html>
